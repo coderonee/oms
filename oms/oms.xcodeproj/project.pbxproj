@@ -58,6 +58,7 @@
 		BD3E630023B228A9005E111B /* oms */ = {
 			isa = PBXGroup;
 			children = (
+				BD3E631823B22CFF005E111B /* Classes */,
 				BD3E630123B228A9005E111B /* AppDelegate.swift */,
 				BD3E630323B228A9005E111B /* SceneDelegate.swift */,
 				BD3E630523B228A9005E111B /* ViewController.swift */,
@@ -68,6 +69,45 @@
 				BD3E630A23B228A9005E111B /* oms.xcdatamodeld */,
 			);
 			path = oms;
+			sourceTree = "<group>";
+		};
+		BD3E631823B22CFF005E111B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BD3E631923B22CFF005E111B /* Home */,
+				BD3E631A23B22CFF005E111B /* Tools */,
+				BD3E631B23B22CFF005E111B /* Profile */,
+				BD3E631C23B22CFF005E111B /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BD3E631923B22CFF005E111B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BD3E631A23B22CFF005E111B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		BD3E631B23B22CFF005E111B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BD3E631C23B22CFF005E111B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MWJWW6256;
 				INFOPLIST_FILE = oms/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jcdt.oms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MWJWW6256;
 				INFOPLIST_FILE = oms/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jcdt.oms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
