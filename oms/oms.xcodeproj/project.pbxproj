@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BD3E630223B228A9005E111B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E630123B228A9005E111B /* AppDelegate.swift */; };
-		BD3E630423B228A9005E111B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E630323B228A9005E111B /* SceneDelegate.swift */; };
-		BD3E630623B228A9005E111B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E630523B228A9005E111B /* ViewController.swift */; };
 		BD3E630923B228A9005E111B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3E630723B228A9005E111B /* Main.storyboard */; };
 		BD3E630C23B228A9005E111B /* oms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3E630A23B228A9005E111B /* oms.xcdatamodeld */; };
 		BD3E630E23B228AA005E111B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3E630D23B228AA005E111B /* Assets.xcassets */; };
@@ -19,8 +17,6 @@
 /* Begin PBXFileReference section */
 		BD3E62FE23B228A9005E111B /* oms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3E630123B228A9005E111B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD3E630323B228A9005E111B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD3E630523B228A9005E111B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD3E630823B228A9005E111B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD3E630B23B228A9005E111B /* oms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = oms.xcdatamodel; sourceTree = "<group>"; };
 		BD3E630D23B228AA005E111B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,8 +56,6 @@
 			children = (
 				BD3E631823B22CFF005E111B /* Classes */,
 				BD3E630123B228A9005E111B /* AppDelegate.swift */,
-				BD3E630323B228A9005E111B /* SceneDelegate.swift */,
-				BD3E630523B228A9005E111B /* ViewController.swift */,
 				BD3E630723B228A9005E111B /* Main.storyboard */,
 				BD3E630D23B228AA005E111B /* Assets.xcassets */,
 				BD3E630F23B228AA005E111B /* LaunchScreen.storyboard */,
@@ -181,9 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3E630623B228A9005E111B /* ViewController.swift in Sources */,
 				BD3E630223B228A9005E111B /* AppDelegate.swift in Sources */,
-				BD3E630423B228A9005E111B /* SceneDelegate.swift in Sources */,
 				BD3E630C23B228A9005E111B /* oms.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MWJWW6256;
 				INFOPLIST_FILE = oms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,7 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MWJWW6256;
 				INFOPLIST_FILE = oms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
