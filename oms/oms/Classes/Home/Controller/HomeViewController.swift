@@ -11,30 +11,54 @@ import UIKit
 private let kTitleViewH : CGFloat = 40
 
 class HomeViewController: UIViewController {
-    private lazy var pageTitleView : PageTitleView = {
-       let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles = ["推荐","游戏","娱乐","酷玩"]
+    private var titles = ["推荐","游戏","娱乐","酷玩","音乐"]
+    
+    private lazy var pageTitleView : PageTitleView = {[weak self] in
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titleView =  PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
         return titleView
+    }()
+    
+    private lazy var pageContentView : PageContentView = {
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
+        
+        //确定所有子控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<titles.count {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        
+        contentView.delegate = self
+        return contentView
+        
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpUi()
+        //MARK:-设置UI界面
+        setupUI()
 
     }
 }
 
 //MARK:- 设置UI界面
 extension HomeViewController{
-    private func setUpUi(){
+    private func setupUI(){
         
         //automaticallyAdjustsScrollViewInsets = false
         
         setUpNavigateionBar()
         
+        //设置titleView
         view.addSubview(pageTitleView)
+        //设置contenView
+        view.addSubview(pageContentView)
         
     }
     
@@ -52,10 +76,20 @@ extension HomeViewController{
         
         navigationItem.rightBarButtonItems = [btn1,btn2,btn3]
         */
-        
-        
     }
-    
-    
+}
+
+//MARK:- 遵守PageTitleViewDelegate协议
+extension HomeViewController : PageTitleViewDelegate {
+    func pagaTitleView(titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndx(index: index)
+    }
+}
+
+//MARK:- 遵守PageContentViewDelegate协议
+extension HomeViewController : PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat) {
+        pageTitleView.setTitleWithProgress(progress: progress)
+    }
 }
 
